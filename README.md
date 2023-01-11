@@ -11,9 +11,9 @@ The code was downloaded from the original GitHub (https://github.com/TencentAILa
 	python -m pip install local_attention==1.4.4
 Additionally, you should ask for access to the following relevant files:
 
-	- pretrained-model: panglao
-	- prepocessed dataset: Zheng68K
-	- gene2gene vec
+	* pretrained-model: panglao
+	* prepocessed dataset: Zheng68K
+	* gene2gene vec
 	
 #### 1.2-Training
 After finishing the previous step, you can train the model using the following command line
