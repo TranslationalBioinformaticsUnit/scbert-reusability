@@ -1,7 +1,7 @@
 # scBERT-reusability
 This repository contains the user experience of reproducing the scBERT model for single-cell annotation (https://doi.org/10.1038/s42256-022-00534-z). It also contains the code and the online data of running this model in a new dataset and analyzing the effect of the distribution based on the number of cells per cell type.
 
-* Reproducibility of results [here]1-Reproducibility of results
+* Reproducibility of results [here](1-Reproducibility of results)
 * Effect of distribution
 
 ## 1-Reproducibility of results
