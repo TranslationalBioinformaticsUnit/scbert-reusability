@@ -32,7 +32,7 @@ python....
 ```
 In less than one hour you will take the result.
 #### 1.4-Prediction novel celltype
-In the original publication, the dataset Macparland was used for the prediction of novel cell type. You download the data from GSE115469, write in h5ad format and preprocess it by running the available script in the original GitHub preprocess.py. (We share the macparland dataset prepocessed??) We trained the model by removing the cell types denominated in the publication (Mature_B_Cells,Plasma_Cells,alpha-beta_T_Cells,gamma-delta_T_Cells_1,gamma-delta_T_Cells_2) and detect them as novel cell type running the following parameters:
+In the original publication, the dataset Macparland was used for the prediction of novel cell type. You download the data from GSE115469, write in h5ad format and preprocess it by running the available script in the original GitHub preprocess.py. (We share the macparland dataset prepocessed??) We trained the model by removing the cell types denominated in the publication (*Mature_B_Cells, Plasma_Cells, alpha-beta_T_Cells, gamma-delta_T_Cells_1, gamma-delta_T_Cells_2*) and detect them as novel cell type running the following parameters:
 ```
 python
 ```
@@ -45,4 +45,4 @@ The different datasets can be found in this GitHub:
 * Neurips_oversampling: augmented the number of cell to 4800 of BP and MoP cells using SMOTE algorithm.
 	
 #### 2.2-Analysis
-For this analysis, we needed to update the python (from 3.6.1 to 3.8.1) and libraries versions to be able to use this dataset, see requirements_update.txt. With the updated version all the results of the publication can be reproduced too. We used the same parameters and command as in the reproducibility.
+For this analysis, we needed to update the python (from 3.6.8 to 3.8.1) and libraries versions to be able to use this dataset, see requirements_update.txt. With the updated version all the results of the publication can be reproduced too. We used the same parameters and command as in the reproducibility.
