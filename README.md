@@ -31,18 +31,18 @@ python predict.py --data_path "Zheng68K.h5ad" --model_path "./ckpts/finetune_bes
 ```
 In less than one hour you will take the result.
 ### 1.4-Detection of novel cell types
-In the original publication, the dataset Macparland was used for the prediction of novel cell type. You download the data, *GSE115469_CellClusterType.txt.gz* and *GSE115469_Data.csv.gz* from [GSE115469](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE115469), create *h5ad* format and preprocess it by running the available script in the original GitHub [preprocess.py](https://github.com/TencentAILabHealthcare/scBERT/blob/master/preprocess.py). (We share the macparland dataset prepocessed??) We trained the model by removing the cell types denominated in the publication (*Mature_B_Cells, Plasma_Cells, alpha-beta_T_Cells, gamma-delta_T_Cells_1, gamma-delta_T_Cells_2*) and detect them as novel cell type running the following parameters:
+In the original publication, the dataset Macparland was used for the prediction of novel cell type. You download the data, *GSE115469_CellClusterType.txt.gz* and *GSE115469_Data.csv.gz* from [GSE115469](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE115469), create *h5ad* format and preprocess it by running the script [preprocess.py](https://github.com/TencentAILabHealthcare/scBERT/blob/master/preprocess.py) of the original GitHub. We trained the model by removing the cell types denominated in the publication (*Mature_B_Cells, Plasma_Cells, alpha-beta_T_Cells, gamma-delta_T_Cells_1, gamma-delta_T_Cells_2*) and detect them as novel cell type using the following command:
 ```
 python predict.py --data_path "test_data_path.h5ad" --model_path "finetuned_model_path" --novel_type True --unassign_thres 0.5  
 ```
-Note: if the *test_data_path.h5ad* has different number of classes (cell types) than the training dataset, you will obtain an error (*size mismatch*) so you should adjust the parameter *out_dim* (_predict.py#lineXXX_)
+Note: if the *test_data_path.h5ad* has different number of classes (cell types) than the training dataset, you will obtain an error (*size mismatch*) so you should adjust the parameter *out_dim* (_predict.py#lineXXX_) and set it to the number of classes of the training dataset.
 ## 2-Effect of distribution
 ### 2.1-Dataset
 The different datasets can be found in this GitHub:
 
 * Neurips_dataset: original dataset.
 * Neurips_subsampling: reducing the number of cells to 300 of all cell types.
-* Neurips_oversampling: augmented the number of cell to 4800 of BP and MoP cells using SMOTE algorithm.
+* Neurips_oversampling: augmented the number of cell to 4800 of *BP* and *MoP* cells using [SMOTE](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html) algorithm, function *fit_resample* and *sedd=2021*.
 	
 ### 2.2-Analysis
 For this analysis, we needed to update the Python (from 3.6.8 to 3.8.1) and libraries versions to be able to use this dataset, see requirements_update.txt. With the updated version all the results of the publication can be reproduced too. We used the same parameters and command as in the reproducibility.
