@@ -10,9 +10,11 @@ The code was downloaded from the original GitHub (https://github.com/TencentAILa
 	python -m pip install einops==0.4.1
 	python -m pip install local_attention==1.4.4
 Additionally, you should ask for access to the following relevant files:
-	pretrained-model: panglao
-	prepocessed dataset: Zheng68K
-	gene2gene vec
+
+	- pretrained-model: panglao
+	- prepocessed dataset: Zheng68K
+	- gene2gene vec
+	
 #### 1.2-Training
 After finishing the previous step, you can train the model using the following command line
 	python -m torch.distributed.launch --data_path "fine-tune_data_path" --model_path "pretrained_model_path" finetune.py
@@ -27,9 +29,11 @@ In the original publication, the dataset Macparland was used for the prediction 
 	python
 ## 2-Effect of distribution
 #### 2.1-Dataset
-The different datasets can be found in this GitHuB:
+The different datasets can be found in this GitHub:
+
 	- Neurips_dataset: original dataset.
 	- Neurips_subsampling: reducing the number of cells to 300 of all cell types.
 	- Neurips_oversampling: augmented the number of cell to 4800 of BP and MoP cells using SMOTE algorithm.
+	
 #### 2.2-Analysis
 For this analysis, we needed to update the python (from 3.6.1 to 3.8.1) and libraries versions to be able to use this dataset, see requirements_update.txt. With the updated version all the results of the publication can be reproduced too. We used the same parameters and command as in the reproducibility.
