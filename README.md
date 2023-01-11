@@ -13,13 +13,14 @@ python -m pip install local_attention==1.4.4
 ```	
 Additionally, you should ask for access to the following relevant files:
 
-* Pretrained model: *panglao_10000.h5ad*
-* Prepocessed dataset: *Zheng68K.h5ad*
+* Pretrained model: *panglao_pretrain.pth*
+* Panglao dataset for preprocessing step: *panglao_10000.h5ad*
+* Preprocessed dataset: *Zheng68K.h5ad*
 	
 ### 1.2-Training
 After finishing the previous step, you can train the model using the following command line:
 ```
-python -m torch.distributed.launch --data_path "fine-tune_data_path" --model_path "pretrained_model_path" finetune.py
+python -m torch.distributed.launch finetune.py --data_path "Zheng68K.h5ad" --model_path "panglao_pretrain.pth"
 ```
 By default, the code is programmed using one fold cross-validation. Increase the variable n-split in line xxxx to use more than one. In the publication and this analysis, we set it to 5.
 Computationally, using one NVIDIA V100 GPU it takes approximately 3 days just to finish one fold. In case to have more than one, we highly recommend executing in parallel.
