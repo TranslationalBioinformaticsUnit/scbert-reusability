@@ -31,7 +31,7 @@ python....
 ```
 In less than one hour you will take the result.
 ### 1.4-Detection of novel cell types
-In the original publication, the dataset Macparland was used for the prediction of novel cell type. You download the data from GSE115469, write in h5ad format and preprocess it by running the available script in the original GitHub preprocess.py. (We share the macparland dataset prepocessed??) We trained the model by removing the cell types denominated in the publication (*Mature_B_Cells, Plasma_Cells, alpha-beta_T_Cells, gamma-delta_T_Cells_1, gamma-delta_T_Cells_2*) and detect them as novel cell type running the following parameters:
+In the original publication, the dataset Macparland was used for the prediction of novel cell type. You download the data from GSE115469, write in h5ad format and preprocess it by running the available script in the original GitHub [preprocess.py](https://github.com/TencentAILabHealthcare/scBERT/blob/master/preprocess.py). (We share the macparland dataset prepocessed??) We trained the model by removing the cell types denominated in the publication (*Mature_B_Cells, Plasma_Cells, alpha-beta_T_Cells, gamma-delta_T_Cells_1, gamma-delta_T_Cells_2*) and detect them as novel cell type running the following parameters:
 ```
 python
 ```
