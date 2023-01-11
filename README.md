@@ -42,4 +42,3 @@ The different datasets can be found in this GitHuB:
 
 2.2-Analysis
 For this analysis, we needed to update the python (from 3.6.1 to 3.8.1) and libraries versions to be able to use this dataset, see requirements_update.txt. With the updated version all the results of the publication can be reproduced too. We used the same parameters and command as in the reproducibility.
-![image](https://user-images.githubusercontent.com/32447837/211785906-9321d5e7-3991-4472-af11-153fc2541405.png)
