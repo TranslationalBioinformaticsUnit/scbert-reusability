@@ -1,7 +1,9 @@
 # scBERT-reusability
 This repository contains the user experience of reproducing the scBERT model for single-cell annotation (https://doi.org/10.1038/s42256-022-00534-z). It also contains the code and the online data of running this model in a new dataset and analyzing the effect of the distribution based on the number of cells per cell type.
+
 1-Reproducibility of results
 2-Effect of distribution
+
 ## 1-Reproducibility results
 #### 1.1-Installation
 The code was downloaded from the original GitHub (https://github.com/TencentAILabHealthcare/scBERT). Then, python 3.6.8 and the required libraries (from its requeriments.txt file) were installed. However, you will need to install two additional python libraries to be able to run scBERT code:
@@ -26,8 +28,8 @@ In the original publication, the dataset Macparland was used for the prediction 
 ## 2-Effect of distribution
 #### 2.1-Dataset
 The different datasets can be found in this GitHuB:
-	Neurips_dataset: original dataset.
-	Neurips_subsampling: reducing the number of cells to 300 of all cell types.
-	Neurips_oversampling: augmented the number of cell to 4800 of BP and MoP cells using SMOTE algorithm.
+	- Neurips_dataset: original dataset.
+	- Neurips_subsampling: reducing the number of cells to 300 of all cell types.
+	- Neurips_oversampling: augmented the number of cell to 4800 of BP and MoP cells using SMOTE algorithm.
 #### 2.2-Analysis
 For this analysis, we needed to update the python (from 3.6.1 to 3.8.1) and libraries versions to be able to use this dataset, see requirements_update.txt. With the updated version all the results of the publication can be reproduced too. We used the same parameters and command as in the reproducibility.
