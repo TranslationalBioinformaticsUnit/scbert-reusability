@@ -22,7 +22,7 @@ After finishing the previous step, you can train the model using the following p
 ```
 python -m torch.distributed.launch finetune.py --data_path "Zheng68K.h5ad" --model_path "panglao_pretrain.pth"
 ```
-By default, the code is programmed using one fold cross-validation. Increase the parameter *n_splits* (*fintetune.py#lineXXX*) to use more than one. In the publication and this analysis, we set it to 5.
+By default, the code is programmed using one fold cross-validation. Increase the parameter *n_splits* (*finetune.py#lineXXX*) to use more than one. In the publication and this reproducibility, we set it to 5.
 Computationally, using one NVIDIA V100 GPU it takes approximately 3 days just to finish one fold. In case to have more than one, we highly recommend executing in parallel.
 ### 1.3-Prediction
 The best model, based on the accuracy, obtained in the training step is used for prediction. Run the following the command.
