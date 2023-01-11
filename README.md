@@ -5,7 +5,7 @@ This repository contains the user experience of reproducing the scBERT model for
 
 2-Effect of distribution
 
-## 1-Reproducibility results
+## 1-Reproducibility of results
 #### 1.1-Installation
 The code was downloaded from the original GitHub (https://github.com/TencentAILabHealthcare/scBERT). Then, python 3.6.8 and the required libraries (from its requeriments.txt file) were installed. However, you will need to install two additional python libraries to be able to run scBERT code:
 ```	
