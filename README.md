@@ -6,7 +6,7 @@ This repository contains the user experience of reproducing the scBERT model for
 
 ## 1-Reproducibility of results
 ### 1.1-Installation
-The code was downloaded from the original GitHub (https://github.com/TencentAILabHealthcare/scBERT). Then, Python 3.6.8 and the required libraries (from its [requeriments.txt](https://github.com/TencentAILabHealthcare/scBERT/blob/master/requirements.txt) file) were installed. However, you will need to install two additional python libraries to be able to run scBERT code:
+The code was downloaded from the original GitHub (https://github.com/TencentAILabHealthcare/scBERT). Then, Python 3.6.8 and the required libraries (from its [requeriments.txt](https://github.com/TencentAILabHealthcare/scBERT/blob/master/requirements.txt) file) were installed. However, you will need to install two additional Python libraries to be able to run scBERT:
 ```	
 python -m pip install einops==0.4.1
 python -m pip install local_attention==1.4.4
@@ -18,7 +18,7 @@ Additionally, you should ask for access to the following relevant files:
 * Preprocessed dataset: *Zheng68K.h5ad*
 	
 ### 1.2-Training
-After finishing the previous step, you can train the model using the following command line:
+After finishing the previous step, you can train the model using the following parameters:
 ```
 python -m torch.distributed.launch finetune.py --data_path "Zheng68K.h5ad" --model_path "panglao_pretrain.pth"
 ```
@@ -27,14 +27,15 @@ Computationally, using one NVIDIA V100 GPU it takes approximately 3 days just to
 ### 1.3-Prediction
 The best model, based on the accuracy, obtained in the training step is used for prediction. Run the following the command.
 ```
-python....
+python predict.py --data_path "Zheng68K.h5ad" --model_path "./ckpts/finetune_best.pth"
 ```
 In less than one hour you will take the result.
 ### 1.4-Detection of novel cell types
 In the original publication, the dataset Macparland was used for the prediction of novel cell type. You download the data from GSE115469, write in h5ad format and preprocess it by running the available script in the original GitHub [preprocess.py](https://github.com/TencentAILabHealthcare/scBERT/blob/master/preprocess.py). (We share the macparland dataset prepocessed??) We trained the model by removing the cell types denominated in the publication (*Mature_B_Cells, Plasma_Cells, alpha-beta_T_Cells, gamma-delta_T_Cells_1, gamma-delta_T_Cells_2*) and detect them as novel cell type running the following parameters:
 ```
-python
+python predict.py --data_path "test_data_path.h5ad" --model_path "finetuned_model_path" --novel_type True --unassign_thres 0.5  
 ```
+Note: if the *test_data_path.h5ad* has different number of classes (cell types) than the training dataset, you will obtain an error (*size mismatch*) so you should adjust the parameter *out_dim* (_predict.py#lineXXX_)
 ## 2-Effect of distribution
 ### 2.1-Dataset
 The different datasets can be found in this GitHub:
