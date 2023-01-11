@@ -40,9 +40,9 @@ Note: if the *test_data_path.h5ad* has different number of classes (cell types) 
 ### 2.1-Dataset
 The different datasets can be found in this GitHub:
 
-* Neurips_dataset: original dataset.
+* Neurips_dataset: preprocessed original dataset.
 * Neurips_subsampling: reducing the number of cells to 300 of all cell types.
-* Neurips_oversampling: augmented the number of cell to 4800 of *BP* and *MoP* cells using [SMOTE](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html) algorithm, function *fit_resample* and *sedd=2021*.
+* Neurips_oversampling: augmenting the number of cells of *BP* and *MoP* to 4800 cells using [SMOTE](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html) algorithm, function *fit_resample* and *seed=2021*.
 	
 ### 2.2-Analysis
 For this analysis, we needed to update the Python, to 3.8.1, and libraries versions to be able to use this dataset, see requirements_update.txt. With the updated version all the results of the publication can be reproduced too. We used the same parameters and command as in the reproducibility.
