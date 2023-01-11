@@ -8,10 +8,10 @@ This repository contains the user experience of reproducing the scBERT model for
 ## 1-Reproducibility results
 #### 1.1-Installation
 The code was downloaded from the original GitHub (https://github.com/TencentAILabHealthcare/scBERT). Then, python 3.6.8 and the required libraries (from its requeriments.txt file) were installed. However, you will need to install two additional python libraries to be able to run scBERT code:
-'''	
+```	
 python -m pip install einops==0.4.1
 python -m pip install local_attention==1.4.4
-'''	
+```	
 Additionally, you should ask for access to the following relevant files:
 
 * pretrained-model: panglao
