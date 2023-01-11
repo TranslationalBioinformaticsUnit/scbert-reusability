@@ -20,18 +20,22 @@ Additionally, you should ask for access to the following relevant files:
 	
 #### 1.2-Training
 After finishing the previous step, you can train the model using the following command line:
-
+```
 python -m torch.distributed.launch --data_path "fine-tune_data_path" --model_path "pretrained_model_path" finetune.py
-
+```
 By default, the code is programmed using one fold cross-validation. Increase the variable n-split in line xxxx to use more than one. In the publication and this analysis, we set it to 5.
 Computationally, using one NVIDIA V100 GPU it takes approximately 3 days just to finish one fold. In case to have more than one, we highly recommend executing in parallel.
 #### 1.3-Prediciton
 The best model, based on the accuracy, obtained in the training step is used for prediction. Run the following the command.
+```
 python....
+```
 In less than one hour you will take the result.
 #### 1.4-Prediction novel celltype
 In the original publication, the dataset Macparland was used for the prediction of novel cell type. You download the data from GSE115469, write in h5ad format and preprocess it by running the available script in the original GitHub preprocess.py. (We share the macparland dataset prepocessed??) We trained the model by removing the cell types denominated in the publication (Mature_B_Cells,Plasma_Cells,alpha-beta_T_Cells,gamma-delta_T_Cells_1,gamma-delta_T_Cells_2) and detect them as novel cell type running the following parameters:
-	python
+```
+python
+```
 ## 2-Effect of distribution
 #### 2.1-Dataset
 The different datasets can be found in this GitHub:
