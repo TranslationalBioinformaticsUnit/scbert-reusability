@@ -21,6 +21,7 @@ Additionally, you should ask for access to the following relevant files:
 After finishing the previous step, you can train the model using the following parameters:
 ```
 python -m torch.distributed.launch finetune.py --data_path "Zheng68K.h5ad" --model_path "panglao_pretrain.pth"
+#The cell type information is stored in 'label' and 'label_dict' files.
 ```
 By default, the code is programmed using one fold cross-validation. Increase the parameter *n_splits* (*finetune.py#lineXXX*) to use more than one. In the publication and this reproducibility, we set it to 5.
 Computationally, using one NVIDIA V100 GPU it takes approximately 3 days just to finish one fold. In case to have more than one, we highly recommend executing in parallel.
