@@ -39,7 +39,7 @@ python predict.py --data_path "test_data_path.h5ad" --model_path "finetuned_mode
 Note: if the *test_data_path.h5ad* has different number of classes (cell types) than the training dataset, you will obtain an error (*size mismatch*) so you should adjust the parameter *out_dim* (_predict.py#lineXXX_) and set it to the number of classes of the training dataset.
 ## 2-Effect of distribution
 ### 2.1-Dataset
-The different datasets can be found in this GitHub:
+The following datasets can be download [here](https://figshare.com/projects/scbert-reusability/157203):
 
 * Neurips_dataset: preprocessed original dataset.
 * Neurips_subsampling: reducing the number of cells to 300 of all cell types.
