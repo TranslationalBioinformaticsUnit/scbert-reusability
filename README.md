@@ -38,7 +38,7 @@ python predict.py --data_path "test_data_path.h5ad" --model_path "finetuned_mode
 *Note:* if the *test_data_path.h5ad* has different number of classes (cell types) than the training dataset, you will obtain an error (*size mismatch*) so you should adjust the parameter *out_dim* in *[predict.py](https://github.com/TencentAILabHealthcare/scBERT/blob/master/predict.py)#line97* and set it to the number of classes of the training dataset.
 ## 2-Effect of distribution of cells
 ### 2.1-Data
-The following datasets were used for studying the effect of distribution of the number of cells and they can be downloaded [here](https://figshare.com/projects/scbert-reusability/157203):
+The following datasets were used for studying the effect of distribution of cells and they can be downloaded [here](https://figshare.com/projects/scbert-reusability/157203):
 
 * *Neurips_dataset*: preprocessed original dataset.
 * *Neurips_subsampling*: reducing the number of cells to 300 of all cell types.
