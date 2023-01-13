@@ -40,9 +40,9 @@ python predict.py --data_path "test_data_path.h5ad" --model_path "finetuned_mode
 ### 2.1-Data
 The following datasets were used for studying the effect of distribution of the number of cells and they can be downloaded [here](https://figshare.com/projects/scbert-reusability/157203):
 
-* Neurips_dataset: preprocessed original dataset.
-* Neurips_subsampling: reducing the number of cells to 300 of all cell types.
-* Neurips_oversampling: augmenting the number of cells of *BP* and *MoP* to 4800 cells using [SMOTE](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html) algorithm, function *fit_resample* and *seed=2021*.
+* *Neurips_dataset*: preprocessed original dataset.
+* *Neurips_subsampling*: reducing the number of cells to 300 of all cell types.
+* *Neurips_oversampling*: augmenting the number of *BP* and *MoP* to 4800 cells using [SMOTE](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html) algorithm, function *fit_resample* and *seed=2021*.
 	
 ### 2.2-Analysis
 For this analysis, we needed to update the Python, to 3.8.1, and libraries versions to be able to use this dataset, see [requirements_update.txt](https://github.com/TranslationalBioinformaticsUnit/scbert-reusability/blob/main/requirements_update.txt). With these updated versions all the results of the publication can be reproduced too. We used the same parameters and commands as in the [reproducibility section]((#1-reproducibility-of-results)).
