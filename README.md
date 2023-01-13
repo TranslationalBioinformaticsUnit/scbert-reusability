@@ -22,16 +22,16 @@ After finishing the installation step, you can train the model using the followi
 ```
 python -m torch.distributed.launch finetune.py --data_path "Zheng68K.h5ad" --model_path "panglao_pretrain.pth"
 ```
-By default, the code is programmed for using one fold cross-validation. To increase it, you should update the parameter *n_splits* (*[finetune.py](https://github.com/TencentAILabHealthcare/scBERT/blob/master/finetune.py)#line141*). In the publication and this reproducibility, we set it to five.
-Computationally, using one NVIDIA V100 GPU it takes approximately 3 days just to finish one fold with *Zheng68K* dataset. For this reason, we highly recommend executing in parallel each fold.
+By default, the process is programmed for using one fold cross-validation. To increase it, you should update the parameter *n_splits* (*[finetune.py](https://github.com/TencentAILabHealthcare/scBERT/blob/master/finetune.py)#line141*). In the publication and this reproducibility, we set it to five.
+Computationally, using one NVIDIA V100 GPU it takes approximately 3 days just to finish one fold with *Zheng68K* dataset. For this reason, we highly recommend executing each fold in parallel.
 ### 1.3-Prediction
-The best model, based on the accuracy, obtained in the training step, is used for prediction. Run the following the command.
+The best model, based on the accuracy, obtained in the training step, is used for prediction. Run the following the command:
 ```
 python predict.py --data_path "Zheng68K.h5ad" --model_path "./ckpts/finetune_best.pth"
 ```
 Execution time is quite fast (less than one hour).
 ### 1.4-Detection of novel cell types
-In the original publication, the dataset *Macparland* was used for the detection of novel cell type. You should download the data, *GSE115469_CellClusterType.txt.gz* and *GSE115469_Data.csv.gz* from [GSE115469](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE115469), generate *h5ad* format and preprocess it by running the script [preprocess.py](https://github.com/TencentAILabHealthcare/scBERT/blob/master/preprocess.py) of the original GitHub. Later, to train the model by removing the cell types denominated in the publication (*Mature_B_Cells, Plasma_Cells, alpha-beta_T_Cells, gamma-delta_T_Cells_1, gamma-delta_T_Cells_2*) and detect them as novel cell type using the following command:
+In the publication, the dataset *Macparland* was used for the detection of novel cell type. You should download the data, *GSE115469_CellClusterType.txt.gz* and *GSE115469_Data.csv.gz* from [GSE115469](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE115469), generate *h5ad* format and preprocess it by running the script [preprocess.py](https://github.com/TencentAILabHealthcare/scBERT/blob/master/preprocess.py) of the original GitHub. Later, to train the model by removing the cell types denominated in the publication (*Mature_B_Cells, Plasma_Cells, alpha-beta_T_Cells, gamma-delta_T_Cells_1, gamma-delta_T_Cells_2*) and detect them as novel cell type using the following command:
 ```
 python predict.py --data_path "test_data_path.h5ad" --model_path "finetuned_model_path" --novel_type True --unassign_thres 0.5  
 ```
