@@ -21,7 +21,7 @@ Then, some bugs from the original scripts needed to be solved to make the result
 * *[finetune.py](https://github.com/TencentAILabHealthcare/scBERT/blob/master/finetune.py)*: update it to run using more than one fold-validation.
 * *[predict.py](https://github.com/TencentAILabHealthcare/scBERT/blob/master/predict.py)*: solve *IndexError* in *line124*.
 
-The updated scripts are accesible in this GitHub.
+The updated scripts are accesible in this GitHub: *[finetune_updated.py](https://github.com/TranslationalBioinformaticsUnit/scbert-reusability/blob/main/finetune_updated.py) and *[predict_updated.py](https://github.com/TranslationalBioinformaticsUnit/scbert-reusability/blob/main/predict_updated.py*
 ### 1.2-Training
 After finishing the installation step, you can train the model using the following parameters:
 ```
