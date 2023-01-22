@@ -16,9 +16,11 @@ Additionally, you should ask the authors for access to the following relevant fi
 * Pretrained model: *panglao_pretrain.pth*
 * Panglao dataset for preprocessing step: *panglao_10000.h5ad*
 * Preprocessed dataset: *Zheng68K.h5ad*
+
 Then, some bugs from the original scripts needed to be solved to make the results reproducible.
 * *[finetune.py](https://github.com/TencentAILabHealthcare/scBERT/blob/master/finetune.py)*: update it to run using more than one fold-validation.
-* *[predict.py](https://github.com/TencentAILabHealthcare/scBERT/blob/master/predict.py)*: solve *IndexError* in *line124*
+* *[predict.py](https://github.com/TencentAILabHealthcare/scBERT/blob/master/predict.py)*: solve *IndexError* in *line124*.
+
 The updated scripts are accesible in this GitHub.
 ### 1.2-Training
 After finishing the installation step, you can train the model using the following parameters:
