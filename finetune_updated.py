@@ -144,7 +144,7 @@ number_split=0
 sss = StratifiedShuffleSplit(n_splits=5, test_size=0.2, random_state=SEED)
 for index_train, index_val in sss.split(dataraw, label):
     number_split=number_split+1
-    #Create a model name of each fold: model_name
+    #Create a model name of each fold: model_name + number_split
     model_name=modelraw+str(number_split)
     data_train, label_train = dataraw[index_train], label[index_train]
     data_val, label_val = dataraw[index_val], label[index_val]
