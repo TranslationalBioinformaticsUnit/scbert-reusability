@@ -19,7 +19,7 @@ Additionally, you should ask the authors for access to the following relevant fi
 * Gene embedding: *gene2vec_16906.npy* and stored in path *../data/*
 
 Then, some bugs from the original scripts needed to be solved to make the results reproducible.
-* *[finetune.py](https://github.com/TencentAILabHealthcare/scBERT/blob/master/finetune.py)*: update it to run using more than one fold-validation.
+* *[finetune.py](https://github.com/TencentAILabHealthcare/scBERT/blob/master/finetune.py)*: update it to run using more than one fold cross-validation.
 * *[predict.py](https://github.com/TencentAILabHealthcare/scBERT/blob/master/predict.py)*: solve *IndexError* in *line124*.
 
 The updated scripts are accesible in this GitHub: *[finetune_updated.py](https://github.com/TranslationalBioinformaticsUnit/scbert-reusability/blob/main/finetune_updated.py)* and *[predict_updated.py](https://github.com/TranslationalBioinformaticsUnit/scbert-reusability/blob/main/predict_updated.py)*
