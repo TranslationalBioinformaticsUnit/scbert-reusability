@@ -1,5 +1,5 @@
 # scBERT-reusability
-This repository contains the user experience of reproducing the scBERT results for single-cell annotation (https://doi.org/10.1038/s42256-022-00534-z). It also contains the material for analyzing the effect of the distribution of cells per cell type. For further details, we recommend you to read the reusability report (*link*).
+This repository contains the user experience and code of reproducing the scBERT results for single-cell annotation (https://doi.org/10.1038/s42256-022-00534-z). It also contains the material for analyzing the effect of the distribution of cells per cell type. For further details, we recommend you to read the reusability report (*link*).
 
 * [Reproducibility of results](#1-reproducibility-of-results)
 * [Effect of distribution of cells](#2-effect-of-distribution-of-cells)
