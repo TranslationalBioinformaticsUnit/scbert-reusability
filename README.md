@@ -57,6 +57,6 @@ The datasets were divided into training (70%) and prediction (30%) data using th
 
 After, we used the same parameters and commands as in the [reproducibility section](#1-reproducibility-of-results), except, *[finetune_updated.py](https://github.com/TranslationalBioinformaticsUnit/scbert-reusability/blob/main/finetune_updated.py)#line126* should be replaced by the following:
 ```
-label_dict, label = np.unique(np.array(data.obs['cell_type']), return_inverse=True)
+label_dict, label = np.unique(np.array(dataraw.obs['cell_type']), return_inverse=True)
 ```
 
