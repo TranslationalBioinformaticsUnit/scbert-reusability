@@ -47,7 +47,7 @@ The following datasets were used for studying the effect of distribution of cell
 
 * *Neurips_dataset*: preprocessed original dataset.
 * *Neurips_subsampling*: reducing the number of cells to 300 of all cell types.
-* *Neurips_oversampling*: augmenting the number of *BP* and *MoP* to 4800 cells using [SMOTE](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html) algorithm, function *fit_resample* and *seed=2021*.
+* *Neurips_oversampling*: augmenting the number of *BP* and *MoP* to 4600 cells using [SMOTE](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html) algorithm, function *fit_resample* and *seed=2021*.
 	
 ### 2.2-Analysis
 For this analysis, we needed to update the Python, to 3.8.1, and libraries versions to be able to use this dataset, see [requirements_update.txt](https://github.com/TranslationalBioinformaticsUnit/scbert-reusability/blob/main/requirements_update.txt). With these updated versions, all the publication results can be reproduced too. We used the same parameters and commands as in the [reproducibility section](#1-reproducibility-of-results), except, *[finetune.py](https://github.com/TencentAILabHealthcare/scBERT/blob/master/finetune.py)#line124* should be replaced by the following:
