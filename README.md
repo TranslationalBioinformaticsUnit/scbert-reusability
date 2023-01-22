@@ -11,7 +11,7 @@ The code was downloaded from the original GitHub (https://github.com/TencentAILa
 python -m pip install einops==0.4.1
 python -m pip install local_attention==1.4.4
 ```	
-Additionally, you should ask the authors for access to the following relevant files:
+Additionally, you should ask the authors for access to the following relevant files (see [data section](https://github.com/TencentAILabHealthcare/scBERT#data) for more details):
 
 * Pretrained model: *panglao_pretrain.pth*
 * Panglao dataset for preprocessing step: *panglao_10000.h5ad*
