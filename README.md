@@ -44,7 +44,7 @@ python predict_updated.py --data_path "test_data_path.h5ad" --model_path "finetu
 *Note:* if the *test_data_path.h5ad* has different number of classes (cell types) than the training dataset, you will obtain an error (*size mismatch*) so you should adjust the parameter *out_dim* in *[predict_updated.py](https://github.com/TranslationalBioinformaticsUnit/scbert-reusability/blob/main/predict_updated.py)#line97* and set it to the number of classes of the training dataset.
 ## 2-Effect of distribution of cells
 ### 2.1-Data
-The following datasets were used for studying the effect of distribution of cells and they can be downloaded [here](https://figshare.com/projects/scbert-reusability/157203):
+The following preprocessed datasets were used for studying the effect of distribution of cells and they can be downloaded [here](https://figshare.com/projects/scbert-reusability/157203):
 
 * *Neurips_dataset*: preprocessed original dataset.
 * *Neurips_subsampling*: reducing the number of cells to 300 of all cell types.
