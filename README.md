@@ -17,7 +17,7 @@ Here are the steps to follow for a proper installation:
 ```	
 git clone https://github.com/TranslationalBioinformaticsUnit/scbert-reusability.git
 ```	
-3- Install Python 3.8.1, tested version, and the required libraries from [requirements.txt](https://github.com/TencentAILabHealthcare/scBERT/blob/master/requirements.txt) file.
+3- Install Python 3.8.1, tested version, and the required libraries from [requirements_update.txt](https://github.com/TranslationalBioinformaticsUnit/scbert-reusability/blob/main/requirements_update.txt) file.
 
 Additionally, you should ask the authors for access to the following relevant files (see [data section](https://github.com/TencentAILabHealthcare/scBERT#data) for more details):
 
