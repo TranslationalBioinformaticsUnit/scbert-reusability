@@ -53,6 +53,12 @@ python -m torch.distributed.launch finetune_updated.py --data_path "neurips_trai
 ```
 Computationally, using one NVIDIA V100 GPU it takes approximately 8 hours just to finish one fold with the original *NeurIPS* dataset. For this reason, we highly recommend executing each fold in parallel for computational optimization.
 
+In case of training with focal loss, this is the command:
+```
+python -m torch.distributed.launch finetune_focalLoss.py --data_path "neurips_train.h5ad" --model_path "panglao_pretrain.pth"
+```
+It is a specialized loss function designed for addressing class imbalance in classification tasks, achieved by adding alpha and gamma parameters to the standard cross-entropy loss.
+
 ### 4.2-Prediction
 The best model, based on the accuracy, obtained in the training step, is used for prediction. Run the following the command:
 ```
