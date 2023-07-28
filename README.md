@@ -34,11 +34,12 @@ Additionally, you should ask the authors for access to the following relevant fi
   * Prediction: the predicted labels.
 
 ## 3-Data
-The following preprocessed datasets were used for studying the effect of distribution of cells and they can be downloaded [here](https://figshare.com/projects/scbert-reusability/157203):
+The following preprocessed examples were used for studying the effect of the distribution of cells and they can be downloaded [here](https://figshare.com/projects/scbert-reusability/157203):
 
 * *Neurips_dataset*: preprocessed original dataset.
 * *Neurips_subsampling*: reducing the number of cells to 300 of all cell types.
 * *Neurips_oversampling*: augmenting the number of *BP* and *MoP* to 4600 cells using [SMOTE](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html) algorithm, function *fit_resample* and *seed=2021*.
+* *Neurips_randomoversampling*: augmenting the number of *BP* and *MoP* to 4000 cells using [RandomOverSampler](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.RandomOverSampler.html) algorithm, function *fit_resample* and *seed=2021*.
 
 ## 4-Analysis
 
