@@ -43,7 +43,7 @@ The following preprocessed examples were used for studying the effect of the dis
 
 ## 4-Analysis
 
-These datasets were divided into training (size 70%) and test (size 30%) data using the function *[StratifiedShuffleSplit](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedShuffleSplit.html)* and *seed=2021*.
+These NeurIPS datasets were divided into training (size 70%) and test (size 30%) data using the function *[StratifiedShuffleSplit](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedShuffleSplit.html)* and *seed=2021*.
 
 ### 4.1-Training
 
