@@ -28,7 +28,7 @@ Additionally, you should ask the authors for access to the following relevant fi
 * Gene embedding: *gene2vec_16906.npy* and stored in path *../data/*
 
 ## 2-Format
-* Input: single-cell RNA sequencing (scRNA-seq) data in *H5AD* format, where *variables* stored the genes symbols and *observations* the truth cell type annotations. This file should be preprocessed before training the model by running the following script [preprocess.py](https://github.com/TranslationalBioinformaticsUnit/scbert-reusability/blob/master/preprocess.py) of the original GitHub.
+* Input: single-cell RNA sequencing (scRNA-seq) data in *H5AD* format, where *variables* stored the genes symbols and *observations* the truth cell type annotations. This file should be preprocessed before training the model by running the following script [preprocess.py](https://github.com/TencentAILabHealthcare/scBERT/blob/master/preprocess.py) of the original GitHub.
 * Output:
   * Training: the model with the highest accuracy in the validation dataset. The output is in *.pth* format, a popular deep learning framework using Python.
   * Prediction: the predicted labels.
