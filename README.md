@@ -1,7 +1,7 @@
 # scBERT-reusability
 [![DOI](https://zenodo.org/badge/587636837.svg)](https://zenodo.org/badge/latestdoi/587636837)
 
-This repository contains the code and data of the reusability report of scBERT, single-cell annotation (https://doi.org/10.1038/s42256-022-00534-z). Especially, the material for analyzing the effect of the distribution of cells per cell type. For further details, we recommend you to read the reusability report.
+This repository contains the code and data of the reusability report of scBERT, single-cell annotation (https://doi.org/10.1038/s42256-022-00534-z). Especially, the material for analyzing the effect of the distribution of cells per cell type. For further details, we recommend you to read the reusability report [https://doi.org/10.1038/s42256-023-00757-8](https://www.nature.com/articles/s42256-023-00757-8).
 
 * [Installation](#1-installation)
 * [Format](#2-format)
